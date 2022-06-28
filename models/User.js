@@ -32,6 +32,10 @@ User.init(
       validate: { len: [8] },
     },
     avatar_id: { type: DataTypes.INTEGER, allowNull: true },
+    created_at: {
+      type: DataTypes.DATEONLY,
+      allowNull: true,
+    },
   },
   {
     hooks: {
@@ -48,7 +52,7 @@ User.init(
       },
     },
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'user',

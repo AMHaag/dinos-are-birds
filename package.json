@@ -4,9 +4,9 @@
   "description": "A game with dinosaurs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server",
-    "stop":"npx kill-port 7121"
+    "start": "node server",
+    "kill": "npx kill-port 7121",
+    "test_seeds": "node db/generateTestSeeds.js"
   },
   "repository": {
     "type": "git",

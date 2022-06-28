@@ -1,13 +1,14 @@
+let userSeeds = `
 INSERT INTO user (username,email,password,avatar_id)
 VALUES
-('littlefoot','lilfoot@gmail.com','1234',2),
-('ducky','quacks@gmail.com','1234',3),
-('cera','3horns@gmail.com','1234',2),
-('spike','chilldino@yahoo.com','1234',1),
-('pietrie','haswings@gmail.com','1234',0),
-('Sharpt00th','villain@gmail.com','1234'1);
-
-INSERT INTO highscores (score,user_id)
+("littlefoot","lilfoot@gmail.com","password",2),
+('ducky','quacks@gmail.com','12341234',3),
+('cera','3horns@gmail.com','12341234',2),
+('spike','chilldino@yahoo.com','12341234',1),
+('pietrie','haswings@gmail.com','12341234',0),
+('Sharpt00th','villain@gmail.com','12341234',1)
+;`;
+let scoreSeeds = `INSERT INTO highscores (score,user_id)
 VALUES
 (829525,1),
 (297792,5),
@@ -109,3 +110,6 @@ VALUES
 (796608,1),
 (782801,3),
 (896093,1);
+`;
+
+module.exports = { userSeeds, scoreSeeds };
