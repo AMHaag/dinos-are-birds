@@ -2,6 +2,7 @@
 
 ## Database information
 ### Setting up the server locally
+  - be sure you already installed all packages using `node install`
   - create a .env file in the root directory with these fields in it:
     - DB_NAME='dinos_are_birds'
     - DB_USER='*your mysql username*'
@@ -18,20 +19,27 @@ The local host port is set to 7121
 
 ### API endpoints
 
+
 #### **User**
-- get all users `./api/users`
-- get single user `./api/users/1`
-- put user `./api/users/1`
-- delete user `./api/users/1`
-- login a user `./api/users/login`
-- post new user `./api/users`
-  - JSON expected:
+`./api/users`
+- **get**: returns entire users table as JSON
+- **post**: accepts JSON to create new user
+  - expected format: 
 ```JSON
 {"username":"string_min_3",
 "email":"valid_email_string",
 "password":"string_min_8",
 "avatar_id":"integer"}
 ```
+`./api/users/n`
+- **get**: returns a single user's information (except password hash)
+- **put**:accepts JSON to update a field of that user's row
+- **delete**: deletes this user from the table
+
+`./api/users/login`
+- **post**:takes a username and password, hashes the password and then checks if it matches. **!!!-this is currently incomplete and not functional-!!!**
+
+
 
 #### **HighScores**
 `./api/scores`
