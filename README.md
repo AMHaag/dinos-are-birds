@@ -13,3 +13,22 @@
 
 ### Local Host Port
 The local host port is set to 7121
+
+### API endpoints
+
+**User**
+- get all users `./api/users`
+- get single user `./api/users/1`
+- put user `./api/users/1`
+- delete user `./api/users/1`
+- login a user `./api/users/login`
+- post new user `./api/users`
+  - JSON expected:
+```JSON
+{"username":"string_min_3",
+"email":"valid_email_string",
+"password":"string_min_8",
+"avatar_id":"integer"}
+```
+
+**HighScores**
