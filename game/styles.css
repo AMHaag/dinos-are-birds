@@ -16,21 +16,39 @@
 }
 
 .jump {
-    animation: jump 0.3s linear;
+    animation: jump 0.4s;
 }
 
 @keyframes jump {
     0% {
         top: 150px;
     }
+    10% {
+        top: 120px;
+    }
+    20% {
+        top: 100px;
+    }
     30% {
-        top: 130px;
+        top: 85px;
+    }
+    40% {
+       top: 70px;
     }
     50% {
-        top: 80px;
+        top: 60px;
     }
+    60% {
+        top:70px;
+    }
+    70% {
+        top:85px;
+    } 
     80% {
-        top: 130px;
+        top: 100px;
+    }
+    90% {
+        top:120px;
     }
     100% {
         top: 150px;
@@ -47,7 +65,7 @@
 
     background-image: url("img/cactus.png");
     background-size: 20px 40px;
-    animation: block 1s infinite linear;
+    animation: block 1.5s infinite linear;
 }
 
 @keyframes block {

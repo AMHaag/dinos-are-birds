@@ -1,5 +1,6 @@
 const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
+let score = 0;
 
 function jump() {
     if (dino.classList != "jump") {
@@ -8,7 +9,7 @@ function jump() {
 
         setTimeout(function () {
             dino.classList.remove("jump");
-        }, 300);
+        }, 400);
     }
     
 }
@@ -18,8 +19,12 @@ let isAlive = setInterval(function () {
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
     // detect collision
-    if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 130) {
-        alert("Game Over!")
+    if (cactusLeft < 50 && cactusLeft > 0 && dinoTop > 120) {
+        alert("Game Over! Score:" + score);
+        // TODO: end game somehow 
+    }
+    else if (cactusLeft <= 0) {
+        score += 10;
     }
 }, 10);
 
