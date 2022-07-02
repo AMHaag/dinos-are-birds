@@ -10,11 +10,26 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Dinos Are Birds Game</a>
-      </h1>
-    </header>
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo"><a href="/"><img src="/images/DINOS ARE BIRDS.png"></a></div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/profile">Profiles <i class="bi bi-person-circle"></i></a></li>
+        <li><a href="/dashboard">High Scores <i class="bi bi-bullseye"></i></a></li>
+        <li><a href="/#contactus">Contact Us <i class="bi bi-chat-square-text"></i></a></li>
+        
+        {{#if loggedIn}}
+            <li id="logout"><a href="#">Logout <i class="bi bi-door-closed"></i></a></li>
+        {{else}}
+          <li><a href="/login">Login <i class="bi bi-box-arrow-in-right"></i></a></li>
+        {{/if}}
+
+      </ul>
+    </nav>
+  </header>
     <main>
       {{{ body }}}
     </main>
