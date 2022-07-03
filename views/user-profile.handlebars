@@ -1,13 +1,32 @@
 <div class="user-profile">
 
     <div class="profile-header">
-        <h1 class="username">{{username}}</h1>
-        <img src={{user-avatar}}/>
+        <h1 class="username">{{user.username}}</h1>
+        <img src={{user.avatar}}/>
     </div>
 
     <div class="user-info">
         <div class="unlocked-items">{{unlocked-items}}</div>
-        <p class="user-bio">{{user-bio}}</p>
+        <p> Member since: {{user.created_at}} -- Last Online: {{user.last_login}}</p>
+        <p class="user-bio">{{user.bio}}</p>
     </div>
-    
+
+    <div class="user-scores">
+        {{#each highscore.member_score as |highscore|}}
+            <div class="card w-100 p-2 m-1 bg-secondary rounded-0">
+                <div class="row">
+                    <div class="col-md-4 align-self-center">
+                        {{#if user.profile_img}}
+                            <a href="/profile/{{user.id}}"><img src="{{user.profile_img}}" class="img-fluid" alt=""></a>
+                            <p class="card-title mt-1">{{user.username}}</p>
+                        {{else}}
+                            <a href="/profile/{{user.id}}"><img class="img-fluid" alt=""></a>
+                            <p class="card-title mt-1">{{user.username}}</p>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
 </div>
