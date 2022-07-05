@@ -1,0 +1,14 @@
+body {
+  width: 100%;
+  margin: auto;
+  background-color: #333333;
+  color: #f0f0f0;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: cyan;
+}
+
+/*# sourceMappingURL=homepage.css.map */

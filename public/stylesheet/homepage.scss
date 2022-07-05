@@ -1,0 +1,18 @@
+$font-stack: Helvetica, sans-serif;
+$primary: cyan;
+$secondary: yellow;
+$tertiary: #f0f0f0;
+$bg-color: #333333;
+
+body {
+    width: 100%;
+    margin: auto;
+    background-color: $bg-color;
+    color: $tertiary;
+    font-family: $font-stack;
+    text-align: center;
+}
+
+h1 {
+    color: $primary;
+}
