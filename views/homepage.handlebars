@@ -1,0 +1,177 @@
+<!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="section1" data-section="section1">
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h1>A Game Where A Bird Jumps Over Objects</h1>
+              <h2><em>Ready to</em> Start</h2>
+              <div class="main-button">
+                  <div class="scroll-to-section"><a href="#section2">Learn More</a></div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        {{#each categories}}
+            <div class="col-lg-4 col-12">
+                <div class="features-post">
+                    <div class="features-content">
+                    <div class="content-show">
+                        <a href="/dashboard/{{this.id}}"><h4>{{this.category_name}}</h4></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+<section class="section why-us" data-section="section2" id="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2 class="mt-5">Play Against Others Around The World</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <ul>
+              <li><i class="sec1"></i><a href='#tabs-1'>Choose Your Characters</a></li>
+              <li><i class="sec2"></i><a href='#tabs-2'>Multiplayer</a></li>
+              <li><i class="sec3"></i><a href='#tabs-3'>View High Scores</a></li>
+            </ul>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="<!-- add image here -->" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Choose Your Characters</h4>
+                    <p>Choose from a variety of different animals. </p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="<!-- add image here -->" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Multiplayer</h4>
+                    <p>Play against users locally or globally!</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-3'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="<!-- add image here -->" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>View High Scores</h4>
+                    <p>See where you stand on the scoreboard and who are the top players.</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section courses p-0" data-section="section4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <div class="main-button">
+              <div class="scroll-to-section"><a href="/dashboard"><i class="scores"></i> View Scores</a></div>
+          </div>
+          </div>
+        </div>
+        </div>
+        </div>
+  </section>
+
+    <section class="section courses p-0">
+        <div class="container">
+          <section class="section-heading m-0">
+            <h2 class="mt-5">Most Recent Scores</h2>
+          </section>
+            <div class="row">
+              {{#each updatedGoals}}
+                <div class="col-12 my-2">
+                    <img class="prof" style ="width:50px" src="{{this.user.profile_img}}"></img>
+                    <a href="/profile/{{this.user.id}}"> {{this.user.username}}</a> received a new score 
+                    <a href="/goals/{{this.id}}">{{this.title}} </a>
+                    on {{format_dateTwo this.createdAt}}
+                </div>
+              {{/each}}
+            </div>
+        </div>
+    </section>
+
+
+  <section class="section contact m-0" data-section="section6" id="contactus">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading m-0">
+            <h2>Contact Us</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-8">
+          <form id="contact">
+            <div class="row">
+              <div class="col-md-6">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
+                  </fieldset>
+                </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button  id="form-submit" class="button"><i class="message"></i> Send Message Now</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Message Modal -->
+        <div id="homepageMessageModal" class="modal">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Thank you, your message has been sent!</h5>
+                  
+                </div>
+                
+                <div class="modal-footer">
+                  <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+  <!--End of Message Modal-->
+

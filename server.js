@@ -1,4 +1,4 @@
-const routes = require('./routes');
+const routes = require('./controllers/');
 const sequelize = require('./config/connection');
 const express = require('express');
 
@@ -7,6 +7,13 @@ const PORT = process.env.PORT || 7121;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// handlebars app template set up
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 //turn on routes
 app.use(routes);

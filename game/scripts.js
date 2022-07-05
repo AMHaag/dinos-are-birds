@@ -2,6 +2,8 @@ const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
 let score = 0;
 
+
+
 function jump() {
     if (dino.classList != "jump") {
 
@@ -20,8 +22,10 @@ let isAlive = setInterval(function () {
 
     // detect collision
     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop > 120) {
-        alert("Game Over! Score:" + score);
-        // TODO: end game somehow 
+        alert("Game Over! Score: " + score);
+        
+        // TODO: post score to database
+        // TODO: bring the user to game over screen
     }
     else if (cactusLeft <= 0) {
         score += 10;
