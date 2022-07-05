@@ -41,9 +41,9 @@
         <div class="col-md-12">
           <div id='tabs'>
             <ul>
-              <li><i class="bi bi-bicycle"></i><a href='#tabs-1'>Choose Your Characters</a></li>
-              <li><i class="bi bi-binoculars"></i><a href='#tabs-2'>Multiplayer</a></li>
-              <li><i class="bi bi-emoji-laughing"></i><a href='#tabs-3'>View High Scores</a></li>
+              <li><i class="sec1"></i><a href='#tabs-1'>Choose Your Characters</a></li>
+              <li><i class="sec2"></i><a href='#tabs-2'>Multiplayer</a></li>
+              <li><i class="sec3"></i><a href='#tabs-3'>View High Scores</a></li>
             </ul>
             <section class='tabs-content'>
               <article id='tabs-1'>
@@ -92,7 +92,7 @@
         <div class="col-md-12">
           <div class="section-heading">
             <div class="main-button">
-              <div class="scroll-to-section"><a href="/dashboard"><i class="bi bi-bullseye"></i> View Scores</a></div>
+              <div class="scroll-to-section"><a href="/dashboard"><i class="scores"></i> View Scores</a></div>
           </div>
           </div>
         </div>
@@ -108,7 +108,7 @@
             <div class="row">
               {{#each updatedGoals}}
                 <div class="col-12 my-2">
-                    <img class="img-thumbnail rounded" style ="width:50px" src="{{this.user.profile_img}}"></img>
+                    <img class="prof" style ="width:50px" src="{{this.user.profile_img}}"></img>
                     <a href="/profile/{{this.user.id}}"> {{this.user.username}}</a> received a new score 
                     <a href="/goals/{{this.id}}">{{this.title}} </a>
                     on {{format_dateTwo this.createdAt}}
@@ -149,7 +149,7 @@
               </div>
               <div class="col-md-12">
                 <fieldset>
-                  <button  id="form-submit" class="button"><i class="bi bi-chat-square-text"></i> Send Message Now</button>
+                  <button  id="form-submit" class="button"><i class="message"></i> Send Message Now</button>
                 </fieldset>
               </div>
             </div>
