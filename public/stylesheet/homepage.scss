@@ -13,6 +13,21 @@ body {
     text-align: center;
 }
 
-h1 {
+h1, h2, h3, h4 {
     color: $primary;
+}
+
+.main-nav ul li a {
+    color: $secondary;
+    display: inline;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.main-nav ul li a:hover {
+    background-color:black;
+    color: $primary;
+    display: inline;
+    text-decoration: none;
+    padding: 10px 20px;
 }

@@ -12,11 +12,17 @@ app.use(express.urlencoded({ extended: true }));
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 
+const sess = {
+  // session variables go here
+};
+// app.use(session(sess));
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 //turn on routes
 app.use(routes);
+app.use(require('./controllers/'));
 
 //turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
