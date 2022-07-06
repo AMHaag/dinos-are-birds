@@ -3,6 +3,7 @@
     height: 200px;
     border: 1px solid black;
     margin: auto;
+    background-color: azure;
 }
 
 #dino {
@@ -76,3 +77,43 @@
         left:-10px;
     }
 }
+
+
+/* This is just to match the general style of the whole site */
+
+body {
+    width: 100%;
+    margin: auto;
+    background-color: #333333;
+    color: #f0f0f0;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: cyan;
+}
+
+.main-nav ul li a {
+    background-color: #333333;
+    border-radius: 6px;
+    color: yellow;
+    display: inline flex;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.main-nav ul li a:hover {
+    background-color: black;
+    color: cyan;
+}
+
+.main-nav ul li a:active {
+    background-color: black;
+    color: blue;
+}
+
+/*# sourceMappingURL=homepage.css.map */
