@@ -1,3 +1,5 @@
+// const { get } = require('../../controllers/home-routes');
+
 const dino = document.getElementById('dino');
 const cactus = document.getElementById('cactus');
 let score = 0;
@@ -35,6 +37,20 @@ let isAlive = setInterval(function () {
 }, 10);
 
 function gameOver(currentscore) {
+  let newScore = {
+    score: currentscore,
+    user_id: 1,
+  };
+  const writeScore = fetch('../api/scores/', {
+    method: 'post',
+    body: `{"score":${currentscore},"user_id":1}`,
+      headers: { 'Content-Type': 'application/json' },
+  });
+
+  // this is just for the demo
+  let thirdScore = document.getElementById('score3');
+  thirdScore.innerText = `amhaag   ${currentscore}`;
+
   cactus.style.animation = 'none';
   dino.style.backgroundImage = 'url(img/Cassowary.png)';
   setTimeout(() => {

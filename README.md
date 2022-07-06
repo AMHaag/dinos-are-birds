@@ -37,7 +37,7 @@ The local host port is set to 7121
 - **delete**: deletes this user from the table
 
 `./api/users/login`
-- **post**:takes a username and password, hashes the password and then checks if it matches. **!!!-this is currently incomplete and not functional-!!!**
+- **post**:takes a username and password, hashes the password and then checks if it matches. 
 
 
 
