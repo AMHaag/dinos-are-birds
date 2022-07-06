@@ -58,3 +58,25 @@ h2 {
     }
 }
 
+.login-form {
+    background-color:black;
+    color:#f0f0f0;
+    padding: 10px;
+    margin: 5px;
+    div {
+        padding: 10px;
+        
+    }
+
+    button {
+        background-color:aqua;
+        color: black;
+    }
+    button:hover {
+        background-color:yellow;
+    }
+    button:active {
+        background-color: yellowgreen;
+    }
+}
+

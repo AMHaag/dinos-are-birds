@@ -46,4 +46,24 @@ h2 a:active {
   color: blue;
 }
 
+.login-form {
+  background-color: black;
+  color: #f0f0f0;
+  padding: 10px;
+  margin: 5px;
+}
+.login-form div {
+  padding: 10px;
+}
+.login-form button {
+  background-color: aqua;
+  color: black;
+}
+.login-form button:hover {
+  background-color: yellow;
+}
+.login-form button:active {
+  background-color: yellowgreen;
+}
+
 /*# sourceMappingURL=homepage.css.map */
