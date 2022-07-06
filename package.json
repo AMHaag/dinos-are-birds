@@ -30,6 +30,6 @@
     "express-handlebars": "^6.0.6",
     "mysql2": "^2.3.3",
     "sass": "^1.53.0",
-    "sequelize": "^6.21.1"
+    "sequelize": "^6.21.2"
   }
 }
