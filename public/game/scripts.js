@@ -36,12 +36,20 @@ let isAlive = setInterval(function () {
 
 function gameOver(currentscore) {
   cactus.style.animation = 'none';
-  let playAgain = confirm(`Game over! Score ${currentscore} \n Play again?`);
-  if (playAgain) {
-    cactus.style.animation = 'block 1.5s infinite linear';
-    dino.classList.remove('jump');
-    score = 0;
-  }
+  dino.style.backgroundImage = 'url(img/Cassowary.png)';
+  setTimeout(() => {
+    let playAgain = confirm(`Game over! Score ${currentscore} \n Play again?`);
+    if (playAgain) {
+      newGame();
+    }
+  }, 150);
+}
+//this function sets all cacti and dino variables back to their defaults
+function newGame() {
+  cactus.style.animation = 'block 1.5s infinite linear';
+  dino.classList.remove('jump');
+  dino.style.backgroundImage = `url('img/Cassowary.gif')`;
+  score = 0;
 }
 document.addEventListener('keydown', function (event) {
   jump();
