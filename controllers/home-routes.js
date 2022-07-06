@@ -13,4 +13,23 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/dashboard', (req, res) => {
+  res.render('highscore');
+});
+
+router.get('/gameover', (req, res) => {
+  res.render('gameover');
+});
+
+router.get('/profile', (req, res) => {
+  res.render('user-profile');
+});
+
+router.get('/game', (req, res) => {
+  res.render('game');
+});
+
+// router.get('/',(req,res)=>{})
+// router.get('/',(req,res)=>{})
+
 module.exports = router;

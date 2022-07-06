@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 7121;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 // handlebars app template set up
 const exphbs = require('express-handlebars');
