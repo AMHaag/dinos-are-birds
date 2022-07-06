@@ -18,8 +18,10 @@ h1, h2, h3, h4 {
 }
 
 .main-nav ul li a {
+    background-color:$bg-color;
+    border-radius:6px;
     color: $secondary;
-    display: inline;
+    display: inline flex;
     text-decoration: none;
     padding: 10px 20px;
 }
@@ -27,7 +29,8 @@ h1, h2, h3, h4 {
 .main-nav ul li a:hover {
     background-color:black;
     color: $primary;
-    display: inline;
-    text-decoration: none;
-    padding: 10px 20px;
+}
+.main-nav ul li a:active {
+    background-color:black;
+    color: blue;
 }

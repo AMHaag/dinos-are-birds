@@ -7,8 +7,27 @@ body {
   text-align: center;
 }
 
-h1 {
+h1, h2, h3, h4 {
   color: cyan;
+}
+
+.main-nav ul li a {
+  background-color: #333333;
+  border-radius: 6px;
+  color: yellow;
+  display: inline flex;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.main-nav ul li a:hover {
+  background-color: black;
+  color: cyan;
+}
+
+.main-nav ul li a:active {
+  background-color: black;
+  color: blue;
 }
 
 /*# sourceMappingURL=homepage.css.map */
