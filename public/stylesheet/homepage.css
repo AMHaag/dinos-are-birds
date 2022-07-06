@@ -51,6 +51,7 @@ h2 a:active {
   color: #f0f0f0;
   padding: 10px;
   margin: 5px;
+  width: 40%;
 }
 .login-form div {
   padding: 10px;
@@ -63,6 +64,27 @@ h2 a:active {
   background-color: yellow;
 }
 .login-form button:active {
+  background-color: yellowgreen;
+}
+
+.signup-form {
+  background-color: black;
+  color: #f0f0f0;
+  padding: 10px;
+  margin: 5px;
+  width: 40%;
+}
+.signup-form div {
+  padding: 10px;
+}
+.signup-form button {
+  background-color: aqua;
+  color: black;
+}
+.signup-form button:hover {
+  background-color: yellow;
+}
+.signup-form button:active {
   background-color: yellowgreen;
 }
 
