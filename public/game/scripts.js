@@ -44,7 +44,7 @@ function gameOver(currentscore) {
   const writeScore = fetch('../api/scores/', {
     method: 'post',
     body: `{"score":${currentscore},"user_id":1}`,
-      headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' },
   });
 
   // this is just for the demo
