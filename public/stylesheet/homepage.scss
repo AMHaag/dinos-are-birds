@@ -29,10 +29,9 @@ h2 {
     }
 }
 
-.mail-nav ul {
+.main-nav ul {
     list-style: none;
     display: flex;
-
 
     li {
         display: inline;
@@ -95,6 +94,7 @@ h2 {
     button {
         background-color:aqua;
         color: black;
+        border-color: #222222;
     }
     button:hover {
         background-color:yellow;

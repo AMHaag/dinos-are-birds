@@ -21,15 +21,15 @@ h2 a:active {
   color: lightgoldenrodyellow;
 }
 
-.mail-nav ul {
+.main-nav ul {
   list-style: none;
   display: flex;
 }
-.mail-nav ul li {
+.main-nav ul li {
   display: inline;
   list-style: none;
 }
-.mail-nav ul li a {
+.main-nav ul li a {
   background-color: #333333;
   border-radius: 6px;
   color: yellow;
@@ -37,11 +37,11 @@ h2 a:active {
   text-decoration: none;
   padding: 10px 20px;
 }
-.mail-nav ul li a:hover {
+.main-nav ul li a:hover {
   background-color: black;
   color: cyan;
 }
-.mail-nav ul li a:active {
+.main-nav ul li a:active {
   background-color: black;
   color: blue;
 }
@@ -50,7 +50,7 @@ h2 a:active {
   background-color: black;
   color: #f0f0f0;
   padding: 10px;
-  margin: 5px;
+  margin: 5px auto;
   width: 40%;
 }
 .login-form div {
@@ -71,7 +71,7 @@ h2 a:active {
   background-color: black;
   color: #f0f0f0;
   padding: 10px;
-  margin: 5px;
+  margin: 5px auto;
   width: 40%;
 }
 .signup-form div {
@@ -80,6 +80,7 @@ h2 a:active {
 .signup-form button {
   background-color: aqua;
   color: black;
+  border-color: #222222;
 }
 .signup-form button:hover {
   background-color: yellow;
