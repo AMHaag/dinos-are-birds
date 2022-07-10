@@ -25,11 +25,11 @@
         <li><a href="/dashboard">High Scores <i class="bi bi-bullseye"></i></a></li>
         <li><a href="/#contactus">Contact Us <i class="bi bi-chat-square-text"></i></a></li>
         
-        {{!-- {{#if loggedIn}} --}}
+        {{#if loggedIn}}
             <li id="logout"><a href="#">Logout <i class="bi bi-door-closed"></i></a></li>
-        {{!-- {{else}} --}}
+        {{else}}
           <li><a href="/login">Login <i class="bi bi-box-arrow-in-right"></i></a></li>
-        {{!-- {{/if}} --}}
+        {{/if}}
 
       </ul>
     </nav>
@@ -48,9 +48,9 @@
     </footer>
   </div>
 
-    {{!-- {{#if loggedIn}} --}}
+    {{#if loggedIn}}
          <script src="/javascript/logout.js"></script>
-    {{!-- {{/if}} --}}
+    {{/if}}
 
 </body>
 
