@@ -12,7 +12,7 @@
 #dino {
     width:50px;
     height: 50px;
-    background-image: url('img/Cassowary.gif');
+    background-image: url('../images/Cassowary.gif');
     background-size: 50px 50px;
 
     position: relative;
@@ -67,7 +67,7 @@
     top: 110px;
     left: 580px;
 
-    background-image: url("img/cactus.png");
+    background-image: url("../images/cactus.png");
     background-size: 20px 40px;
     animation: block 1.5s infinite linear;
 }
