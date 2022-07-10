@@ -51,7 +51,7 @@ h2 a:active {
   background-color: black;
   color: #f0f0f0;
   padding: 10px;
-  margin: 5px auto;
+  margin: 20px auto;
   width: 40%;
 }
 .login-form div {
@@ -74,7 +74,7 @@ h2 a:active {
   background-color: black;
   color: #f0f0f0;
   padding: 10px;
-  margin: 5px auto;
+  margin: 20px auto;
   width: 40%;
 }
 .signup-form div {
@@ -86,10 +86,6 @@ h2 a:active {
 }
 .signup-form div .choose-avatar-div div {
   display: inline;
-}
-.signup-form div .choose-avatar-div div img {
-  height: 50px;
-  width: 50px;
 }
 .signup-form div .choose-avatar-div div img {
   height: 50px;
@@ -120,6 +116,13 @@ h2 a:active {
   text-align: center;
   margin: auto;
   font-size: 30px;
+}
+
+.character-choice {
+  display: flex;
+}
+.character-choice img {
+  display: inline;
 }
 
 /*# sourceMappingURL=homepage.css.map */
