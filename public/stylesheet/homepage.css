@@ -91,6 +91,10 @@ h2 a:active {
   height: 50px;
   width: 50px;
 }
+.signup-form div .choose-avatar-div div img {
+  height: 50px;
+  width: 50px;
+}
 .signup-form button {
   background-color: aqua;
   color: black;
