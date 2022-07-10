@@ -59,6 +59,7 @@ h2 a:active {
 .login-form button {
   background-color: aqua;
   color: black;
+  border-color: #222222;
 }
 .login-form button:hover {
   background-color: yellow;
@@ -76,6 +77,9 @@ h2 a:active {
 }
 .signup-form div {
   padding: 10px;
+}
+.signup-form div .choose-avatar-div div {
+  display: inline;
 }
 .signup-form button {
   background-color: aqua;

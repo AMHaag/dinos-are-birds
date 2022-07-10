@@ -71,6 +71,7 @@ h2 {
     button {
         background-color:aqua;
         color: black;
+        border-color: #222222;
     }
     button:hover {
         background-color:yellow;
@@ -89,6 +90,11 @@ h2 {
     div {
         padding: 10px;
         
+        .choose-avatar-div {
+            div {
+                display: inline;
+            }
+        }
     }
 
     button {
