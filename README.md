@@ -1,5 +1,25 @@
 # dinos-are-birds
 
+## About
+A game where you play as a bird or dinosaur and run and jump over cacti! It allows you to log in and save your high scores, as well as see other people's high scores.
+
+## Technologies
+* mySQL
+* HTML
+* SASS / CSS
+* Javascript
+* node.js
+* express.js
+
+## Links
+* Deployed application: http://www.dinos-are-birds.fun/
+
+## Contributors
+* Aaron Haag: https://github.com/AMHaag
+* Pina Gomet: https://github.com/pgomet
+* Sarah King: https://github.com/negativeh0ll0w
+* Michael Zelaya: https://github.com/Vertis-Z
+
 ## Database information
 ### Setting up the server locally
   - be sure you already installed all packages using `node install`
