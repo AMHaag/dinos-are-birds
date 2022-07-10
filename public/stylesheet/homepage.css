@@ -15,15 +15,16 @@ h2 a {
   color: yellow;
 }
 h2 a:hover {
-  color: #f0f0f0;
+  color: lightgoldenrodyellow;
 }
 h2 a:active {
-  color: lightgoldenrodyellow;
+  color: aliceblue;
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
+  margin: auto;
 }
 .main-nav ul li {
   display: inline;
@@ -60,6 +61,7 @@ h2 a:active {
   background-color: aqua;
   color: black;
   border-color: #222222;
+  padding: 16px;
 }
 .login-form button:hover {
   background-color: yellow;
@@ -78,19 +80,42 @@ h2 a:active {
 .signup-form div {
   padding: 10px;
 }
+.signup-form div .choose-avatar-div {
+  display: flex;
+  flex-wrap: flex;
+}
 .signup-form div .choose-avatar-div div {
   display: inline;
+}
+.signup-form div .choose-avatar-div div img {
+  height: 50px;
+  width: 50px;
 }
 .signup-form button {
   background-color: aqua;
   color: black;
   border-color: #222222;
+  padding: 16px;
 }
 .signup-form button:hover {
   background-color: yellow;
 }
 .signup-form button:active {
   background-color: yellowgreen;
+}
+
+.game {
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.title {
+  text-align: center;
+  margin: auto;
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=homepage.css.map */

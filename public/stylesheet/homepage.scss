@@ -22,16 +22,17 @@ h2 {
     color:$secondary;
     }
     a:hover {
-        color:$tertiary;
+        color:lightgoldenrodyellow;
     }
     a:active {
-        color:lightgoldenrodyellow;
+        color:aliceblue;
     }
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
+    margin: auto;
 
     li {
         display: inline;
@@ -72,6 +73,7 @@ h2 {
         background-color:aqua;
         color: black;
         border-color: #222222;
+        padding: 16px;
     }
     button:hover {
         background-color:yellow;
@@ -91,8 +93,15 @@ h2 {
         padding: 10px;
         
         .choose-avatar-div {
+            display: flex;
+            flex-wrap: flex;
             div {
                 display: inline;
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                }
             }
         }
     }
@@ -101,6 +110,7 @@ h2 {
         background-color:aqua;
         color: black;
         border-color: #222222;
+        padding: 16px;
     }
     button:hover {
         background-color:yellow;
