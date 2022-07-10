@@ -46,18 +46,10 @@ function gameOver(currentscore) {
     body: `{"score":${currentscore},"user_id":1}`,
     headers: { 'Content-Type': 'application/json' },
   });
-
-  // this is just for the demo
-  let thirdScore = document.getElementById('score3');
-  thirdScore.innerText = `amhaag   ${currentscore}`;
-
   cactus.style.animation = 'none';
   dino.style.backgroundImage = 'url(img/Cassowary.png)';
   setTimeout(() => {
-    let playAgain = confirm(`Game over! Score ${currentscore} \n Play again?`);
-    if (playAgain) {
-      newGame();
-    }
+    document.location('/gameover');
   }, 150);
 }
 //this function sets all cacti and dino variables back to their defaults
