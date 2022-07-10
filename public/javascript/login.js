@@ -15,9 +15,9 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/game');
+      document.location.replace('/');
     } else {
-      alert(response.statusText);
+      alert(`User or password incorrect\n ${response.statusText}`);
     }
   }
 }
