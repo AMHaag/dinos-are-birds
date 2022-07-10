@@ -23,7 +23,6 @@ let isAlive = setInterval(function () {
   // detect collision
   if (cactusLeft < 50 && cactusLeft > 0 && dinoTop > 120) {
     gameOver(score);
-    // TODO: post score to database
     // TODO: bring the user to game over screen
   } else if (cactusLeft <= 0) {
     score += 10;

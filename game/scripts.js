@@ -1,7 +1,10 @@
 const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
-let score = 0;
 
+const router = require('express').Router();
+
+
+let score = 0;
 
 
 function jump() {
@@ -22,7 +25,7 @@ let isAlive = setInterval(function () {
 
     // detect collision
     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop > 120) {
-        alert("Game Over! Score: " + score);
+        
         
         // TODO: post score to database
         // TODO: bring the user to game over screen
