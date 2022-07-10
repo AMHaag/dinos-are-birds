@@ -1,15 +1,11 @@
 const routes = require('./controllers/');
 const sequelize = require('./config/connection');
 const express = require('express');
-const session = require('exress-session')
-const SequelizeStore = require('connect-session-sequelize')(session.Store)
-
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 7121;
-
-
-
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
