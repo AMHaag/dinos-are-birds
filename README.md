@@ -1,7 +1,7 @@
 # dinos-are-birds
 
 ## About
-A game where you play as a bird or dinosaur and run and jump over cacti! It allows you to log in and save your high scores, as well as see other people's high scores.
+A game where you play as a bird, or a character of choice, and run and jump over cacti! It allows you to log in and save your high scores, view other people's high scores, and do multiplayer.
 
 ## Technologies
 * mySQL
@@ -33,12 +33,45 @@ A game where you play as a bird or dinosaur and run and jump over cacti! It allo
   > **note** *that .env files are in the .gitignore to prevent leaking your personal mysql root password.*  
   > **note** *the test_seeds script adds 6 users and 100 highscores assigned to those 6 users*  
   > **note** *that currently everytime you start the server locally it first erases all tables currently*  
-
 ### Local Host Port
 The local host port is set to 7121
 
-### API endpoints
+## Table of Contents
+- Profiles
+- High Scores
+- Contact Us
+- Login
 
+## User Stories
+1. As a user I want to navigate through the webpage and know more about the game
+2. As a user I want to navigate through the high score board
+3. As a user I want to be able to contact the creators of the game
+4. As a user I want to be directed to the game through the webpage
+
+## The Challenge
+- Use Node.js and Express.js to create a RESTful API
+- Use Handlebars.js as a template engine
+- For database, use MySQL and Sequelize ORM
+- Must have both GET and POST routes
+- Must be deployed using Heroku
+- At least one new technology, package or library
+- Must have a polished UI, be responsive, and interactive (buttons must work)
+- A folder structure that meets MVC paradigm
+- Has authentication
+- Protect API keys as well as sensitive information
+
+## The Development Process
+In order to complete the challenge, the following had to be done:
+1. Understand what the project's main concept and requirements were
+2. Define the concept and purpose of the project
+3. Brain storm possible project ideas
+4. Define each team member's roles
+5. Create the game databases
+6. Push 'sketches' into each coordinated branch (handlebars, HTML, CSS, SASS, etc.)
+7. Integrate application into Heroku
+8. Final review and proper documentation
+
+### API endpoints
 
 #### **User**
 `./api/users`
@@ -58,8 +91,6 @@ The local host port is set to 7121
 
 `./api/users/login`
 - **post**:takes a username and password, hashes the password and then checks if it matches. 
-
-
 
 #### **HighScores**
 `./api/scores`
