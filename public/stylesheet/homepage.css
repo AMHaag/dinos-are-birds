@@ -25,6 +25,7 @@ h2 a:active {
   list-style: none;
   display: flex;
   margin: auto;
+  justify-content: center;
 }
 .main-nav ul li {
   display: inline;

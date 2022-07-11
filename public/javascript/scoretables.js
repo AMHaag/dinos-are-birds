@@ -19,6 +19,7 @@ function writeTopScores(data) {
     highTable.append(topTr);
   });
 }
+
 fetch(`/api/scores/${user_id}`)
   .then((res) => res.json())
   .then((res) => {
@@ -33,91 +34,6 @@ fetch('/api/scores/top/50', {})
     writeTopScores(res);
   });
 
-//example data
-let userData = [
-  {
-    id: 32,
-    score: 959175,
-    user_id: 1,
-  },
-  {
-    id: 22,
-    score: 946065,
-    user_id: 1,
-  },
-  {
-    id: 39,
-    score: 935826,
-    user_id: 1,
-  },
-  {
-    id: 101,
-    score: 896093,
-    user_id: 1,
-  },
-  {
-    id: 25,
-    score: 873274,
-    user_id: 1,
-  },
-  {
-    id: 2,
-    score: 829525,
-    user_id: 1,
-  },
-  {
-    id: 99,
-    score: 796608,
-    user_id: 1,
-  },
-  {
-    id: 55,
-    score: 743632,
-    user_id: 1,
-  },
-];
-let topData = [
-  {
-    id: 32,
-    score: 959175,
-    user_id: 1,
-    user: {
-      id: 1,
-      avatar_id: 2,
-      username: 'littlefoot',
-    },
-  },
-  {
-    id: 22,
-    score: 946065,
-    user_id: 1,
-    user: {
-      id: 1,
-      avatar_id: 2,
-      username: 'littlefoot',
-    },
-  },
-  {
-    id: 39,
-    score: 935826,
-    user_id: 1,
-    user: {
-      id: 1,
-      avatar_id: 2,
-      username: 'littlefoot',
-    },
-  },
-  {
-    id: 101,
-    score: 896093,
-    user_id: 1,
-    user: {
-      id: 1,
-      avatar_id: 2,
-      username: 'littlefoot',
-    },
-  },
-];
-
-// writeTopScores(topData);
-writeHighScoreTable(userData, topData);
+if (!user_id) {
+  userTable.style.display = 'none';
+}
