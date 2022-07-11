@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
+  console.log(req);
   res.render('homepage', { loggedIn: req.session.loggedIn });
 });
 
@@ -9,12 +10,15 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-  console.log(req.session);
   res.render('login');
 });
 
 router.get('/dashboard', (req, res) => {
-  res.render('highscore', { loggedIn: req.session.loggedIn });
+  res.render('highscore', {
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+    username: req.session.username,
+  });
 });
 
 router.get('/gameover', (req, res) => {
@@ -26,7 +30,11 @@ router.get('/profile', (req, res) => {
 });
 
 router.get('/game', (req, res) => {
-  res.render('game', { loggedIn: req.session.loggedIn });
+  res.render('game',  {
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+    username: req.session.username,
+  });
 });
 
 // router.get('/',(req,res)=>{})

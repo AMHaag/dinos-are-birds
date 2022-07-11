@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 15px;
+}
+tr:nth-child(even) {
+    background-color: #514545;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+th,
+td {
+    text-align: left;
+    padding: 10px;
+}
+.scores{
+    display:flex;
+    font-size:1.25rem
+    
+}
+#user-id{display:none}
+#userTable {
+
+    font-size: larger;
+
+}
+#highTable{
+
+    font-size: larger;
+}
+
+#avatar{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
