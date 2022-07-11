@@ -1,85 +1,31 @@
 <!-- ***** High Score Information ***** -->
 <section class="section courses">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="section-heading mb-0"><h2>{{highscore.title}}</h2></div>
-                <div class="description mb-5"><h2>{{highscore.description}}</h2></div>
-                <div class="instructions mb-5">
+    <div id="user-id">{{user_id}}</div>
                     <div class="section-heading mb-0">
                         <h2 class="mt-4">Aim For The High Score Board!</h2>
                     </div>
-                    <div class="row">
-                        {{!-- if members update available: (smaller div) --}}
-                        {{#if highscore.member_score}}
-                        <div class="col-md-8 my-2">
-                        {{else}}
-                        <div class="col-md-12 my-2">
-                        {{/if}}
-                        {{#if postOwner}}
-                            {{#each highscore.steps}}
-                                <div class="mb-5 bg-dark p-5">
-                                    <h4>{{this.title}}</h4>
-                                    <p>{{this.description}}</p>
-                                    <p> See the top player during these dates: <b>{{format_dateTwo this.start_date}}</b> thru <b>{{format_dateTwo this.due_date}}</b></p>
-                                </div>
-                            {{/each}}
-                        {{else}}
-                                {{#each highscore.steps}}
-                                    <div class="mb-5 bg-dark p-5">
-                                        <h4>{{this.title}}</h4>
-                                        <p>{{this.description}}</p>
-                                        <p> See the top player during these dates: <b>{{format_dateTwo this.start_date}}</b> thru <b>{{format_dateTwo this.due_date}}</b></p>
-                                    </div>
-                                {{/each}}
-                        {{/if}}
+<section class="scores">
+    <link rel="stylesheet" href="/stylesheet/table.css">
+    <link rel="stylesheet" href="/stylesheet/homepage.css">
+<div class="row">
+    <div class="column" >
+        <table id="userTable">
+            <tr>
+                <th>{{username}}'s topscores</th>
+            </tr>
 
-                        </div>
-                        {{!-- Members updates: --}}
-                        <div class="col-md-4 my-2">
-                            <div class="container">
-                                <div class="row">
-                                    {{#each highscore.member_score as |highscore|}}
-                                        <div class="card w-100 p-2 m-1 bg-secondary rounded-0">
-                                            <div class="row">
-                                                <div class="col-md-4 align-self-center">
-                                                    {{#if highscore.user.profile_img}}
-                                                        <a href="/profile/{{highscore.user.id}}"><img src="{{highscore.user.profile_img}}" class="img" alt=""></a>
-                                                        <p class="card-title mt-1">{{highscore.user.username}}</p>
-                                                    {{else}}
-                                                        <a href="/profile/{{highscore.user.id}}"><img class="img" alt=""></a>
-                                                        <p class="card-title mt-1">{{highscore.user.username}}</p>
-                                                    {{/if}}
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card-body text-warning">
-                                                        {{!-- <p class="card-title mt-1">{{highscore.user.username}}</p> --}}
-                                                        <h6 class="card-text">{{highscore.status}}</h6>
-                                                        <p class="card-text"><small>on {{format_dateTwo highscore.updatedAt}}</small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {{/each}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-{{!-- Discussion --}}
-{{!-- <section class="section-heading coming-soon">
-        <h2 class="mt-4">Discussion</h2>
-        {{#if loggedIn}}
-            <form class="comment-form">
-                <div>
-                    <textarea name="comment-body"style="height: 130px; width: 70%;" ></textarea>
-                </div>
-                <div>
-                    <button class="main-button" id="button-comment" type="submit">Post</button>
-                </div>
-            </form>
-        {{/if}}
-        {{> comments highscore.comments}}    
-    </section>
-</section> --}}
+        </table>
+    </div>
+    <div class="column">
+        <table id="highTable">
+            <tr>
+                <th> </th>
+                <th>username</th>
+                <th>score</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    <script src="/javascript/scoretables.js"></script>
+</section>

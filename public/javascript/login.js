@@ -15,6 +15,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
+      console.dir(response);
       document.location.replace('/');
     } else {
       alert(`User or password incorrect\n ${response.statusText}`);

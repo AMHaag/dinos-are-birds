@@ -1,4 +1,4 @@
-// const { get } = require('../../controllers/home-routes');
+let user_id = document.getElementById('user-id').innerText;
 
 const dino = document.getElementById('dino');
 const cactus = document.getElementById('cactus');
@@ -36,26 +36,22 @@ let isAlive = setInterval(function () {
 }, 10);
 
 function gameOver(currentscore) {
-  let newScore = {
-    score: currentscore,
-    user_id: 1,
-  };
   const writeScore = fetch('../api/scores/', {
     method: 'post',
-    body: `{"score":${currentscore},"user_id":1}`,
+    body: JSON.stringify({ score, user_id }),
     headers: { 'Content-Type': 'application/json' },
   });
   cactus.style.animation = 'none';
-  dino.style.backgroundImage = 'url(img/Cassowary.png)';
+  dino.style.backgroundImage = 'url(images/Cassowary.png)';
   setTimeout(() => {
-    document.location('/gameover');
+    document.location.replace('/gameover');
   }, 150);
 }
 //this function sets all cacti and dino variables back to their defaults
 function newGame() {
   cactus.style.animation = 'block 1.5s infinite linear';
   dino.classList.remove('jump');
-  dino.style.backgroundImage = `url('img/Cassowary.gif')`;
+  dino.style.backgroundImage = `url('images/Cassowary.gif')`;
   score = 0;
 }
 document.addEventListener('keydown', function (event) {
